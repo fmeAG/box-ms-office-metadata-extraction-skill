@@ -1,0 +1,29 @@
+{
+  "name": "box-office-document-properties-skill",
+  "version": "1.0.0",
+  "description": "custom box skill that extracts document properties from MS Office documents",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "box-node-sdk": "^1.23.0",
+    "dotenv": "^6.1.0",
+    "form-data": "^2.3.3",
+    "jimp": "^0.6.0",
+    "lodash": "^4.17.11",
+    "office-document-properties-with-custom": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.1",
+    "@types/node": "^8.0.57",
+    "serverless-webpack": "^5.1.1",
+    "source-map-support": "^0.5.6",
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.5.0"
+  },
+  "author": "Jan Pfitzner (fme AG)",
+  "license": "ISC"
+}
