@@ -7,6 +7,7 @@ import {
 import { Box } from "./utils/box";
 import * as documentProperties from "office-document-properties-with-custom";
 import { FilesReader, SkillsWriter, SkillsErrorEnum } from "./skills-kit-2.0";
+import { customPropertiesSettings } from "./custom-properties";
 
 type APIGatewayProxyBoxSkillHandler = Handler<
   APIGatewayProxyBoxSkillEvent,
@@ -43,11 +44,7 @@ async function processEvent(filesReader, skillsWriter) {
   const box = new Box(filesReader, skillsWriter);
 
   documentProperties.provideCustomPropertiesSettings([
-    {
-      name: "status",
-      msName: "Status",
-      type: "string"
-    }
+    ...customPropertiesSettings
   ]);
 
   try {
